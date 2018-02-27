@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1 id="hora"></h1>
+</body>
+<script type="text/javascript">
+	(function(){
+	//alert("Hola")
+ var d = new Date();
+ var horas = d.getHours();
+ var minutos=d.getMinutes();
+ var segundos=d.getSeconds();
+ alert(d.getHours);
+ var cont = document.getElementById("hora");
+ setInterval(function(){
+ 	segundos--;
+  if(segundos == 0)
+  {
+  	minutos--;
+    segundos = 59;
+  }
+  if(minutos == 0)
+  {
+  	horas--;
+    minutos=59;
+  }
+	cont.innerHTML = horas+":"+minutos+":"+segundos;
+ // alert("hola")
+  //horas--;
+    },1000);
+    
+   
+    
+})();
+</script>
+</html>
